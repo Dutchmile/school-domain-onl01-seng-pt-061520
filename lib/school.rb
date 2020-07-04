@@ -17,9 +17,15 @@ class School
     @roster[grade]
   end
 
-  def sort
-    @roster.each do |grade|
-    @roster[grade].sort
+  def sort(grade)
+    @roster[grade].sort do |a, b|
+      if a == b
+        0
+      elsif a < b
+        -1
+      elsif a > b
+        1
+      end
     end
   end
 
