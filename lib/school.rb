@@ -17,8 +17,8 @@ class School
     @roster[grade]
   end
 
-  def sort(grade)
-    @roster[grade].sort do |a, b|
+  def sort
+    @roster.sort do |a, b|
       if a == b
         0
       elsif a < b
